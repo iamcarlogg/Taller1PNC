@@ -7,28 +7,29 @@ public class Person {
     private String name;
     private int age;
     private String dui;
-    private Date loanDate;
-    private Date limitDate;
+    private final Date loanDate;
+    private final Date limitDate;
 
     public Person(Book book, String name, int age, String dui) {
         this.book = book;
         this.name = name;
         this.age = age;
         this.dui = dui;
-        //Use actual date
+
         this.loanDate = new Date();
-        //Limit date is set to 7 days after the loan
         Calendar cal = Calendar.getInstance();
         cal.setTime(this.loanDate);
         cal.add(Calendar.DAY_OF_MONTH, 7);
-
-
+        this.limitDate = cal.getTime();
     }
 
-    public String getBook() {
+
+    public Book getBook() {
+        return book;
+    }
+    public String getBookId(){
         return book.getId();
     }
-
     public void setBook(Book book) {
         this.book = book;
     }

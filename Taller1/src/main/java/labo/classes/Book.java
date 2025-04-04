@@ -1,5 +1,7 @@
 package labo.classes;
 
+import labo.utils.Utils;
+
 import java.util.Random;
 
 public class Book {
@@ -15,7 +17,7 @@ public class Book {
     public Book(String title, String author, int year, String genre, int quantity) {
         Random rand = new Random();
 
-        this.id = "BB"+ Integer.toString(rand.nextInt(10000)) +"AA" ;
+        this.id = "BB"+ Integer.toString(rand.nextInt(10000)) + Utils.generateTwoLetterCode() ;
         this.title = title;
         this.author = author;
         this.year = year;
@@ -81,7 +83,15 @@ public class Book {
     }
     @Override
     public String toString(){
-        return "Book: " + getTitle() + "- Is available: " + isAvailable();
+        return "Book{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", year=" + year +
+                ", genre='" + genre + '\'' +
+                ", quantity=" + quantity +
+                ", available=" + available +
+                '}';
 
     }
 }
