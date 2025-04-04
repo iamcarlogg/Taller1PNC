@@ -22,6 +22,18 @@ public class Person {
         cal.add(Calendar.DAY_OF_MONTH, 7);
         this.limitDate = cal.getTime();
     }
+    public Person(Book book, String name, int age) {
+        this.book = book;
+        this.name = name;
+        this.age = age;
+        this.dui = "00000000-0";
+
+        this.loanDate = new Date();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(this.loanDate);
+        cal.add(Calendar.DAY_OF_MONTH, 7);
+        this.limitDate = cal.getTime();
+    }
 
 
     public Book getBook() {
