@@ -13,15 +13,15 @@ public class Main {
     static ArrayList<Person> loaners = new ArrayList<>();
 
     public static void main(String[] args) {
-        Newspaper newspaper1 = new Newspaper(
-                "El Diario de Hoy",
-                "Redacción EDH",
-                2024,
-                "Noticias",
-                10,
-                "2024-04-04",
-                32
-        );
+//        Newspaper newspaper1 = new Newspaper(
+//                "El Diario de Hoy",
+//                "Redacción EDH",
+//                2024,
+//                "Noticias",
+//                10,
+//                "2024-04-04",
+//                32
+//        );
 
 //        Newspaper newspaper2 = new Newspaper(
 //                "La Prensa Gráfica",
@@ -74,7 +74,7 @@ public class Main {
 //        allBooks.add(book2);
 //        allBooks.add(manga1);
 //        allBooks.add(manga2);
-        allBooks.add(newspaper1);
+//        allBooks.add(newspaper1);
 //        allBooks.add(newspaper2);
         Scanner scanner = new Scanner(System.in);
         int option = 0;
