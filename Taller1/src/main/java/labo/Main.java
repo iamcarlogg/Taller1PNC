@@ -23,59 +23,59 @@ public class Main {
                 32
         );
 
-        Newspaper newspaper2 = new Newspaper(
-                "La Prensa Gráfica",
-                "Redacción LPG",
-                2024,
-                "Noticias",
-                15,
-                "2024-04-03",
-                28
-        );
-
-        // 2 libros convencionales
-        BookConventional book1 = new BookConventional(
-                "Cien años de soledad",
-                "Gabriel García Márquez",
-                1967,
-                "Realismo mágico",
-                5
-        );
-
-        BookConventional book2 = new BookConventional(
-                "1984",
-                "George Orwell",
-                1949,
-                "Distopía",
-                7
-        );
-
-        // 2 mangas
-        Manga manga1 = new Manga(
-                "Naruto Vol. 1",
-                "Masashi Kishimoto",
-                1999,
-                "Shonen",
-                12,
-                "Volumen 1",
-                "Japón"
-        );
-
-        Manga manga2 = new Manga(
-                "Attack on Titan Vol. 5",
-                "Hajime Isayama",
-                2010,
-                "Seinen",
-                8,
-                "Volumen 5",
-                "Japón"
-        );
-        allBooks.add(book1);
-        allBooks.add(book2);
-        allBooks.add(manga1);
-        allBooks.add(manga2);
+//        Newspaper newspaper2 = new Newspaper(
+//                "La Prensa Gráfica",
+//                "Redacción LPG",
+//                2024,
+//                "Noticias",
+//                15,
+//                "2024-04-03",
+//                28
+//        );
+//
+//        // 2 libros convencionales
+//        BookConventional book1 = new BookConventional(
+//                "Cien años de soledad",
+//                "Gabriel García Márquez",
+//                1967,
+//                "Realismo mágico",
+//                5
+//        );
+//
+//        BookConventional book2 = new BookConventional(
+//                "1984",
+//                "George Orwell",
+//                1949,
+//                "Distopía",
+//                7
+//        );
+//
+//        // 2 mangas
+//        Manga manga1 = new Manga(
+//                "Naruto Vol. 1",
+//                "Masashi Kishimoto",
+//                1999,
+//                "Shonen",
+//                12,
+//                "Volumen 1",
+//                "Japón"
+//        );
+//
+//        Manga manga2 = new Manga(
+//                "Attack on Titan Vol. 5",
+//                "Hajime Isayama",
+//                2010,
+//                "Seinen",
+//                8,
+//                "Volumen 5",
+//                "Japón"
+//        );
+//        allBooks.add(book1);
+//        allBooks.add(book2);
+//        allBooks.add(manga1);
+//        allBooks.add(manga2);
         allBooks.add(newspaper1);
-        allBooks.add(newspaper2);
+//        allBooks.add(newspaper2);
         Scanner scanner = new Scanner(System.in);
         int option = 0;
 
