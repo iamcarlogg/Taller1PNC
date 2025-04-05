@@ -16,7 +16,7 @@ public class BookForm {
         System.out.println("1. Manga");
         System.out.println("2. Periódico");
         System.out.println("3. Libro Convencional");
-        System.out.print("Ingrese opción (1-3): ");
+        System.out.print("Ingrese opción (1-3): \n");
 
         int option = scanner.nextInt();
         scanner.nextLine();
@@ -27,7 +27,7 @@ public class BookForm {
         System.out.print("Ingrese el autor: ");
         String author = scanner.nextLine();
 
-        System.out.print("Ingrese el año: ");
+        System.out.print("Ingrese el año de publicacion: ");
         int year = scanner.nextInt();
         scanner.nextLine();
         System.out.print("Ingrese el género: ");
@@ -41,24 +41,24 @@ public class BookForm {
 
         switch(option) {
             case 1: // Manga
-                System.out.print("Ingrese el conjunto del manga (Book Set): ");
-                String bookSet = scanner.nextLine();
+                System.out.print("Que tomo es el ejemplar? ");
+                String bookVolume = scanner.nextLine();
 
-                System.out.print("Ingrese el estilo artístico: ");
-                String artStyle = scanner.nextLine();
+                System.out.print("Ingrese el pais de creacion ? (Japon, Corea o China) ");
+                String originCountry = scanner.nextLine();
 
-                newBook = new Manga(title, author, year, genre, quantity, bookSet, artStyle);
-                System.out.println("Manga creado con ID: " + newBook.getId());
+                newBook = new Manga(title, author, year, genre, quantity, bookVolume, originCountry);
+                System.out.println("Manga creado con ID: " + newBook.getId()+"\n");
                 break;
             case 2: // Periódico
-                System.out.print("Ingrese el tipo de papel: ");
-                String paperType = scanner.nextLine();
+                System.out.print("Ingrese la fecha de publicacion ");
+                String pubDate= scanner.nextLine();
 
                 System.out.print("Ingrese el número de páginas: ");
                 int numberOfPages = scanner.nextInt();
                 scanner.nextLine(); // Consumir salto de línea
 
-                newBook = new Newspaper(title, author, year, genre, quantity, paperType, numberOfPages);
+                newBook = new Newspaper(title, author, year, genre, quantity, pubDate, numberOfPages);
                 System.out.println("Periódico creado con ID: " + newBook.getId());
                 break;
             case 3: // Libro Convencional

@@ -94,17 +94,13 @@ public class Main {
                     BooksMethods.showBookDetails(allBooks, id);
                     break;
                 case 7:
-                    // Listar las personas con préstamos (solución al error)
-                    BooksMethods.loanersList(loaners);
-                    break;
-                case 8:
                     System.out.println("Saliendo del sistema...");
                     break;
                 default:
                     System.out.println("Opción no válida, por favor intente nuevamente.");
                     break;
             }
-        } while (option != 8);
+        } while (option != 7);
 
         scanner.close();
     }
