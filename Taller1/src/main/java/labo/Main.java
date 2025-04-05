@@ -1,7 +1,6 @@
 package labo;
 
-import labo.classes.Book;
-import labo.classes.Person;
+import labo.classes.*;
 import labo.ui.BookForm;
 import labo.utils.BooksMethods;
 import java.util.ArrayList;
@@ -14,6 +13,69 @@ public class Main {
     static ArrayList<Person> loaners = new ArrayList<>();
 
     public static void main(String[] args) {
+        Newspaper newspaper1 = new Newspaper(
+                "El Diario de Hoy",
+                "Redacción EDH",
+                2024,
+                "Noticias",
+                10,
+                "2024-04-04",
+                32
+        );
+
+//        Newspaper newspaper2 = new Newspaper(
+//                "La Prensa Gráfica",
+//                "Redacción LPG",
+//                2024,
+//                "Noticias",
+//                15,
+//                "2024-04-03",
+//                28
+//        );
+//
+//        // 2 libros convencionales
+//        BookConventional book1 = new BookConventional(
+//                "Cien años de soledad",
+//                "Gabriel García Márquez",
+//                1967,
+//                "Realismo mágico",
+//                5
+//        );
+//
+//        BookConventional book2 = new BookConventional(
+//                "1984",
+//                "George Orwell",
+//                1949,
+//                "Distopía",
+//                7
+//        );
+//
+//        // 2 mangas
+//        Manga manga1 = new Manga(
+//                "Naruto Vol. 1",
+//                "Masashi Kishimoto",
+//                1999,
+//                "Shonen",
+//                12,
+//                "Volumen 1",
+//                "Japón"
+//        );
+//
+//        Manga manga2 = new Manga(
+//                "Attack on Titan Vol. 5",
+//                "Hajime Isayama",
+//                2010,
+//                "Seinen",
+//                8,
+//                "Volumen 5",
+//                "Japón"
+//        );
+//        allBooks.add(book1);
+//        allBooks.add(book2);
+//        allBooks.add(manga1);
+//        allBooks.add(manga2);
+        allBooks.add(newspaper1);
+//        allBooks.add(newspaper2);
         Scanner scanner = new Scanner(System.in);
         int option = 0;
 
@@ -25,8 +87,7 @@ public class Main {
             System.out.println("4. Listar libros disponibles");
             System.out.println("5. Prestar un libro");
             System.out.println("6. Ver detalles de un libro");
-            System.out.println("7. Listar personas con préstamos");
-            System.out.println("8. Salir");
+            System.out.println("7. Salir");
             System.out.print("Seleccione una opción: ");
 
             try {
