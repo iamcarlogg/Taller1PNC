@@ -87,8 +87,7 @@ public class Main {
             System.out.println("4. Listar libros disponibles");
             System.out.println("5. Prestar un libro");
             System.out.println("6. Ver detalles de un libro");
-            System.out.println("7. Listar personas con préstamos");
-            System.out.println("8. Salir");
+            System.out.println("7. Salir");
             System.out.print("Seleccione una opción: ");
 
             try {
