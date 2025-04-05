@@ -90,20 +90,34 @@ public class BooksMethods {
 
     public static void showBookDetails(ArrayList<Book> books, String id) {
         boolean found = false;
-        for (Book book : books) {
-            if (book.getId().equalsIgnoreCase(id)) {
+        for (Book b : books) {
+            if (b.getId().equalsIgnoreCase(id)) {
                 System.out.println("Detalles del libro:");
-                System.out.println("ID: " + book.getId());
-                System.out.println("Título: " + book.getTitle());
-                System.out.println("Autor: " + book.getAuthor());
-                System.out.println("Año: " + book.getYear());
-                System.out.println("Género: " + book.getGenre());
-                System.out.println("Cantidad: " + book.getQuantity());
-                System.out.println("Estado: " + (book.isAvailable() ? "Disponible" : "Prestado"));
-                // Si cada subclase tiene más detalles, se puede llamar a toString(), o imprimir campos específicos
-                System.out.println("Detalles adicionales: " + book.toString());
+                System.out.println("ID: " + b.getId());
+                System.out.println("Título: " + b.getTitle());
+                System.out.println("Autor: " + b.getAuthor());
+                System.out.println("Año: " + b.getYear());
+                System.out.println("Género: " + b.getGenre());
+                System.out.println("Cantidad: " + b.getQuantity());
+                System.out.println("Estado: " + (b.isAvailable() ? "Disponible" : "Prestado"));
+
+                // Si es un Manga, mostrar datos extras
+                if (b instanceof Manga) {
+                    Manga m = (Manga) b;
+                    System.out.println("Número de tomo : " + m.getBookSet());
+                    System.out.println("Lugar de creación : " + m.getOriginCountry());
+                }
+                // Si es un Newspaper, mostrar datos extras
+                else if (b instanceof Newspaper) {
+                    Newspaper n = (Newspaper) b;
+                    System.out.println("Fecha de publicación : " + n.getPubDate());
+                    System.out.println("Número de páginas: " + n.getNumberOfPages());
+                }
+                // Si no es ninguno de los anteriores (libro convencional u otra subclase sin datos extras),
+                // no se muestran datos adicionales.
+
                 found = true;
-                break;
+                break; // Se encontró el libro, se detiene el ciclo
             }
         }
         if (!found) {
