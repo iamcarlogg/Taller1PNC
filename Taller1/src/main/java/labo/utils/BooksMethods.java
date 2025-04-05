@@ -112,6 +112,7 @@ public class BooksMethods {
                 System.out.println("Detalles adicionales: " + book.toString());
                 encontrado = true;
                 break;
+
             }
         }
 
