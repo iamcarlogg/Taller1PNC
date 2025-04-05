@@ -10,6 +10,7 @@ public class BookConventional extends Book {
     }
     @Override
     public String getTitle() {
-        return "Book: " + getTitle() +" - Author: "+getAuthor()+ " - Is available: " + isAvailable();
+        return "Book: " + super.getTitle() + " - Author: " + getAuthor() + " - Is available: " + isAvailable();
     }
+
 }

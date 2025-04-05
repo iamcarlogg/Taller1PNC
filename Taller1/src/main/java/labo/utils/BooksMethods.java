@@ -13,6 +13,7 @@ public class BooksMethods {
             String status = book.isAvailable() ? "Available" : "Is loaned";
 
             if(book.isAvailable()){
+                System.out.println("Title " + book.getId());
                 System.out.println("Title: " + book.getTitle());
                 System.out.println("Author: " + book.getAuthor());
                 System.out.println("Type: " + type);
@@ -84,6 +85,29 @@ public class BooksMethods {
             } else {
                 System.out.println("No book loaned by " + person.getName());
             }
+        }
+    }
+
+    public static void showBookDetails(ArrayList<Book> books, String id) {
+        boolean found = false;
+        for (Book book : books) {
+            if (book.getId().equalsIgnoreCase(id)) {
+                System.out.println("Detalles del libro:");
+                System.out.println("ID: " + book.getId());
+                System.out.println("Título: " + book.getTitle());
+                System.out.println("Autor: " + book.getAuthor());
+                System.out.println("Año: " + book.getYear());
+                System.out.println("Género: " + book.getGenre());
+                System.out.println("Cantidad: " + book.getQuantity());
+                System.out.println("Estado: " + (book.isAvailable() ? "Disponible" : "Prestado"));
+                // Si cada subclase tiene más detalles, se puede llamar a toString(), o imprimir campos específicos
+                System.out.println("Detalles adicionales: " + book.toString());
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("No se encontró un libro con el ID: " + id);
         }
     }
 

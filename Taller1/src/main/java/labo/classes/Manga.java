@@ -2,30 +2,30 @@ package labo.classes;
 import labo.utils.Utils;
 
 public class Manga extends Book{
-    private String bookSet;
-    private String artStyle;
+    private String bookVolume;
+    private String originCountry;
 
-    public Manga(String title, String author, int year, String genre, int quantity, String bookSet, String artStyle) {
+    public Manga(String title, String author, int year, String genre, int quantity, String bookVolume, String originCountry) {
         super(title, author, year, genre, quantity);
         this.setId("MG" + Integer.toString(new java.util.Random().nextInt(10000)) + Utils.generateTwoLetterCode());
-        this.bookSet = bookSet;
-        this.artStyle = artStyle;
+        this.bookVolume = bookVolume;
+        this.originCountry = originCountry;
     }
 
     public String getBookSet() {
-        return bookSet;
+        return bookVolume;
     }
 
-    public void setBookSet(String bookSet) {
-        this.bookSet = bookSet;
+    public void setBookVolume(String bookVolume) {
+        this.bookVolume = bookVolume;
     }
 
-    public String getArtStyle() {
-        return artStyle;
+    public String getOriginCountry() {
+        return originCountry;
     }
 
-    public void setArtStyle(String artStyle) {
-        this.artStyle = artStyle;
+    public void setArtStyle(String originCountry) {
+        this.originCountry = originCountry;
     }
 
     @Override
@@ -38,8 +38,8 @@ public class Manga extends Book{
                 ", genre='" + getGenre() + '\'' +
                 ", quantity=" + getQuantity() +
                 ", available=" + isAvailable() +
-                ", bookSet='" + bookSet + '\'' +
-                ", artStyle='" + artStyle + '\'' +
+                ", bookVolume='" + bookVolume + '\'' +
+                ", originCountry='" + originCountry + '\'' +
                 '}';
     }
 
